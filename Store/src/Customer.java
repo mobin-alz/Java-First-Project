@@ -4,13 +4,11 @@ public class Customer {
     private String name;
     private int age;
 
-    public float wallet;
     private ArrayList<Product> products = new ArrayList<Product>();
 
     public void setProduct(Product product) {
 
         products.add(product);
-        this.wallet = product.price;
 
     }
 

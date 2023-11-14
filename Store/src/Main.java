@@ -16,9 +16,13 @@ public class Main {
         c1.setProduct(p1);
         c1.setProduct(p2);
 
-        System.out.println("Before Discount : " + (int)ca1.calcInvoice(c1));
-        ca1.setDiscount(c1,20);
-        System.out.println("After Discount : " + (int)ca1.getWallet(c1));
-
+        System.out.println("Customer 1 wallet : " + (int)ca1.calcInvoice(c1));
+        ca1.setDiscount(20);
+        ca1.setDiscount(5);
+        ca1.setDiscount(20);
+        ca1.setDiscount(5);
+        System.out.println("Customer 1 wallet : " + (int)ca1.calcInvoice(c1));
+        ca1.setDiscount(30);
+        System.out.println("Customer 1 wallet : " + (int)ca1.calcInvoice(c1));
     }
 }

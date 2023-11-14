@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Cashier {
     int id ;
     String name;
+    float discount = 0f ;
     public Cashier(int id , String name) {
         this.id = id;
         this.name = name;
@@ -19,19 +20,17 @@ public class Cashier {
                 customer.getProducts()) {
             total += product.price ;
         }
-        customer.wallet = total;
-        return total;
+        return (((float) (100 - discount) / 100) * total);
+
     }
 
 
-    public void setDiscount(Customer customer,int discount){
-        float firsWallet = (float) customer.wallet;
-        customer.wallet =  (((float) (100 - discount) / 100) * firsWallet);
+    public void setDiscount(int discount){
+
+        this.discount = discount;
+
     }
 
-    public float getWallet(Customer customer)
-    {
-        return customer.wallet;
-    }
+
 
 }
