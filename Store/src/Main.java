@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         Customer c1 = new Customer();
+        c1.setName("Akbar");
         c1.setAge(50);
         c1.setAge(20);
         Customer c2 = new Customer();
@@ -13,6 +14,8 @@ public class Main {
         Cashier ca1 = new Cashier(1,"Reza");
         Cashier ca2 = new Cashier(2,"Ali");
 
+        ca1.setAge(30);
+
         c1.setProduct(p1);
         c1.setProduct(p2);
 
@@ -24,5 +27,14 @@ public class Main {
         System.out.println("Customer 1 wallet : " + (int)ca1.calcInvoice(c1));
         ca1.setDiscount(30);
         System.out.println("Customer 1 wallet : " + (int)ca1.calcInvoice(c1));
+
+        System.out.println(getNameAndAge(c1));
+        System.out.println(getNameAndAge(ca1));
     }
+
+    // Polymorphism
+    static String getNameAndAge(Person person) {
+        return person.getName() + " " + person.getAge();
+    }
+
 }

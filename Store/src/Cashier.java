@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 
-public class Cashier {
+public class Cashier extends Person {
     int id ;
-    String name;
     float discount = 0f ;
     public Cashier(int id , String name) {
         this.id = id;
